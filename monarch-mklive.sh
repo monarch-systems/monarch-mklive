@@ -7,5 +7,5 @@ sudo ./mkiso.sh \
   -o . \
   -p "Monarch Linux" \
   -s overlay/ \
-  -I etc/
+  -I etc/ \
   -i Monarch-Linux-$(date +%Y%m%d).iso
