@@ -4,7 +4,8 @@
 
 sudo ./mkiso.sh \
   -a x86_64 \
-  -o . \
-  -s overlay/ \
+  -o Monarch-Linux-$(date +%Y%m%d).iso \
+  -s xz \
   -I etc/ \
-  -i Monarch-Linux-$(date +%Y%m%d).iso
+  -I usr/ \
+  -i xz
