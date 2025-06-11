@@ -6,6 +6,5 @@ sudo ./mklive.sh \
   -a x86_64 \
   -o Monarch-Linux-$(date +%Y%m%d).iso \
   -s xz \
-  -I etc/ \
-  -I usr/ \
+  -I overlay/ \
   -i xz
