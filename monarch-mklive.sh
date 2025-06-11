@@ -6,6 +6,7 @@ sudo ./mklive.sh \
   -a x86_64 \
   -o Monarch-Linux-$(date +%Y%m%d).iso \
   -s xz \
-  -g runit void-runit 
+  -g runit void-runit \
+  -e "/usr/bin/bash" \
   -I overlay/ \
   -i xz
