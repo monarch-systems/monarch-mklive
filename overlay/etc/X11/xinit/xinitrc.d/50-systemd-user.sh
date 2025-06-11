@@ -1,3 +1,4 @@
+#!/bin/sh
 #  SPDX-License-Identifier: LGPL-2.1-or-later
 #
 #  This file is part of systemd.
@@ -7,7 +8,8 @@
 #  the Free Software Foundation; either version 2.1 of the License, or
 #  (at your option) any later version.
 
-[Unit]
-Description=Bluetooth Support
-Documentation=man:systemd.special(7)
-StopWhenUnneeded=yes
+systemctl --user import-environment DISPLAY XAUTHORITY
+
+if command -v dbus-update-activation-environment >/dev/null 2>&1; then
+    dbus-update-activation-environment DISPLAY XAUTHORITY
+fi
